@@ -1,0 +1,19 @@
+[
+    {"input": "(())", "expected_output": 0},
+    {"input": "()()", "expected_output": 0},
+    {"input": "(((", "expected_output": 3},
+    {"input": "(()(()(", "expected_output": 3},
+    {"input": "))(((((", "expected_output": 3},
+    {"input": "())", "expected_output": -1},
+    {"input": "))(", "expected_output": -1},
+    {"input": ")))", "expected_output": -3},
+    {"input": ")())())", "expected_output": -3},
+    {"input": "", "expected_output": 0},
+    {"input": "(", "expected_output": 1},
+    {"input": ")", "expected_output": -1},
+    {"input": "(())()", "expected_output": 0},
+    {"input": "((())))", "expected_output": -1},
+    {"input": "(()))(", "expected_output": 0},
+    {"input": "((((((()))))))", "expected_output": 0},
+    {"input": "())(()", "expected_output": 0}
+]
