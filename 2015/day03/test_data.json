@@ -1,0 +1,30 @@
+[
+    {
+        "input": ">",
+        "expected_output": 2
+    },
+    {
+        "input": "^>v<",
+        "expected_output": 4
+    },
+    {
+        "input": "^v^v^v^v^v",
+        "expected_output": 2
+    },
+    {
+        "input": ">>>><<<<",
+        "expected_output": 5
+    },
+    {
+        "input": "^<<vv>>>",
+        "expected_output": 9
+    },
+    {
+        "input": "",
+        "expected_output": 1
+    },
+    {
+        "input": "^",
+        "expected_output": 2
+    }
+]
