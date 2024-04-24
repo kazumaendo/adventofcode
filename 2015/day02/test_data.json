@@ -1,0 +1,38 @@
+[
+    {
+        "input": "2x3x4",
+        "expected_output": 58
+    },
+    {
+        "input": "1x1x10",
+        "expected_output": 43
+    },
+    {
+        "input": "2x2x2",
+        "expected_output": 28
+    },
+    {
+        "input": "3x4x5",
+        "expected_output": 106
+    },
+    {
+        "input": "1x1x10",
+        "expected_output": 43
+    },
+    {
+        "input": "0x0x0",
+        "expected_output": 0
+    },
+    {
+        "input": "10x10x10",
+        "expected_output": 700
+    },
+    {
+        "input": "100x1x1",
+        "expected_output": 403
+    },
+    {
+        "input": "1x1x1",
+        "expected_output": 7
+    }
+]
