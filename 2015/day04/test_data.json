@@ -1,0 +1,10 @@
+[
+    {
+        "input": "abcdef",
+        "expected_output": 609043
+    },
+    {
+        "input": "pqrstuv",
+        "expected_output": 1048970
+    }
+]
