@@ -1,0 +1,22 @@
+[
+    {
+        "input": "ugknbfddgicrmopn",
+        "expected_output": true
+    },
+    {
+        "input": "aaa",
+        "expected_output": true
+    },
+    {
+        "input": "jchzalrnumimnmhp",
+        "expected_output": false
+    },
+    {
+        "input": "haegwjzuvuyypxyu",
+        "expected_output": false
+    },
+    {
+        "input": "dvszwmarrgswjxmb",
+        "expected_output": false
+    }
+]
