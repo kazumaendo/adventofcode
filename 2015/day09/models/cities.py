@@ -7,15 +7,15 @@ from models.custom_exceptions import ExtractionError
 class City():
     def __init__(self, name: str) -> None:
         self.name = name
-        self.path_to_another_city: Dict[City, int] = {}
+        self.path_to_another_city: Dict[str, int] = {}
 
     def __hash__(self):
         return hash(self.name)
     
     def __repr__(self):
-        return f"City name: {self.name},\nlinks:\n"+('\n'.join([f"{city.name}: {distance}" for city, distance in self.path_to_another_city.items()]))
+        return f"City name: {self.name},\nlinks:\n"+('\n'.join([f"{city}: {distance}" for city, distance in self.path_to_another_city.items()]))
     
-    def add_distance_to_another_city(self, city: 'City', distance: int) -> None:
+    def add_distance_to_another_city(self, city: str, distance: int) -> None:
         self.path_to_another_city[city] = distance
 
 class CityNetworkBuilder():
@@ -42,8 +42,8 @@ class CityNetworkBuilder():
         self.seen_cities[city_name] = city
 
     def update_city(self, from_city: City, to_city: City, distance: int):
-        from_city.add_distance_to_another_city(to_city, distance)
-        to_city.add_distance_to_another_city(from_city,distance)
+        from_city.add_distance_to_another_city(to_city.name, distance)
+        to_city.add_distance_to_another_city(from_city.name,distance)
 
     def get_city(self, city_name: str):
         return self.seen_cities[city_name]
