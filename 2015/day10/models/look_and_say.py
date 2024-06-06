@@ -10,12 +10,12 @@ class LookAndSay():
 
         for current_char in string_iterator:
             if current_char == previous_char:
-                repetition_counter+=1
+                repetition_counter += 1
             else:
-                next_sequence+=f"{repetition_counter}{previous_char}"
+                next_sequence += f"{repetition_counter}{previous_char}"
                 previous_char = current_char
                 repetition_counter = 1
-        next_sequence+=f"{repetition_counter}{previous_char}"
+        next_sequence += f"{repetition_counter}{previous_char}"
         self.value = next_sequence
 
     def create_sequence_with_repetition(self, repetition_count: int):

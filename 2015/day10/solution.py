@@ -1,10 +1,11 @@
 import argparse
 from models.look_and_say import LookAndSay
 
+
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Solve for first or second solution.")
-    parser.add_argument("--first", action="store_true", help="Solve first problem")
-    parser.add_argument("--second", action="store_true", help="Solve second problem")
+    parser = argparse.ArgumentParser(description="Solve for first or second solution.") # noqa
+    parser.add_argument("--first", action="store_true", help="Solve first problem") # noqa
+    parser.add_argument("--second", action="store_true", help="Solve second problem") # noqa
     parser.add_argument("--test", action="store_true", help="Run tests.")
     args = parser.parse_args()
 
@@ -23,6 +24,7 @@ def main() -> None:
         unittest.TextTestRunner().run(test_suite)
     else:
         parser.print_help()
+
 
 if __name__ == '__main__':
     main()
