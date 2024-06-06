@@ -1,5 +1,5 @@
 import argparse
-from pathlib import Path
+from models.look_and_say import LookAndSay
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Solve for first or second solution.")
@@ -9,7 +9,11 @@ def main() -> None:
     args = parser.parse_args()
 
     if args.first:
-        pass
+        initial = 1321131112
+        sequence = LookAndSay(initial)
+        sequence.create_sequence_with_repetition(40)
+        print(f"final value: {sequence.value}")
+        print(f"length: {sequence.length}")
     elif args.second:
         print()
     elif args.test:
