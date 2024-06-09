@@ -1,5 +1,5 @@
 import argparse
-from models.look_and_say import LookAndSay
+from models.corporate_password import CorporatePassword
 
 
 def main() -> None:
@@ -10,11 +10,7 @@ def main() -> None:
     args = parser.parse_args()
 
     if args.first:
-        initial = 1321131112
-        sequence = LookAndSay(initial)
-        sequence.create_sequence_with_repetition(40)
-        print(f"final value: {sequence.value}")
-        print(f"length: {sequence.length}")
+        pass
     elif args.second:
         print()
     elif args.test:
