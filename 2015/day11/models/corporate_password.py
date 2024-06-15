@@ -10,7 +10,21 @@ class CorporatePassword():
         pass
 
     def increment_password(self):
-        pass
+        password = list(self._password)
+        current_idx = len(password)-1
+        while current_idx >= 0:
+            if password[current_idx] == 'z':
+                password[current_idx] = 'a'
+                current_idx -= 1
+            else:
+                password[current_idx] = chr(ord(password[current_idx]) + 1) # noqa
+                break
+        else:
+            password.insert(0, 'a')
+        incremented_password = ''.join(password)
+        # TODO: create a setter
+        self._password = incremented_password
+        return incremented_password
 
     def is_valid_password(self) -> bool:
         prev_letter_pair_idx: int | None = None
