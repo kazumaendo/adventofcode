@@ -10,7 +10,9 @@ def main() -> None:
     args = parser.parse_args()
 
     if args.first:
-        pass
+        input = "hepxcrrq"
+        corporate_password = CorporatePassword(input)
+        print(f"next valid password: {corporate_password.get_next_valid_password()}") # noqa
     elif args.second:
         print()
     elif args.test:

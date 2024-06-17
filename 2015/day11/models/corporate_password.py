@@ -6,8 +6,8 @@ class CorporatePassword():
 
     def get_next_valid_password(self):
         while not self.is_valid_password():
-            self.increment_password
-        pass
+            self.increment_password()
+        return self._password
 
     def increment_password(self):
         password = list(self._password)

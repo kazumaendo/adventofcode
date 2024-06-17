@@ -16,3 +16,7 @@ class TestFunction(unittest.TestCase):
         self.assertEqual(CorporatePassword("hijklmmn").increment_password(), 'hijklmmo') # noqa
         self.assertEqual(CorporatePassword("hijklmmz").increment_password(), 'hijklmna') # noqa
         self.assertEqual(CorporatePassword("hzzzzzzz").increment_password(), 'iaaaaaaa') # noqa
+
+    def test_find_next_password(self):
+        self.assertEqual(CorporatePassword("abcdefgh").get_next_valid_password(), 'abcdffaa') # noqa
+        self.assertEqual(CorporatePassword("ghijklmn").get_next_valid_password(), 'ghjaabcc') # noqa
